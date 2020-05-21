@@ -1,0 +1,94 @@
+﻿<process name="P11_114" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="c9b8c157-8a64-4780-8ebb-25b93db86c13">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="9bd29fe5-dc38-4f10-8e80-a22cb666401e" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>fab2b1e0-ee03-4a32-a276-ecdd03eb1f6d</onsuccess>
+  </stage>
+  <stage stageid="7bc018cd-9103-477c-bad5-e9543577ff87" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="55a25a81-23ae-47b1-ac41-7c8b08adb791" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="fab2b1e0-ee03-4a32-a276-ecdd03eb1f6d" name="Add column" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="collection" name="Collection" narrative="The collection to append a field to." expr="[Emp_Data]" />
+      <input type="text" name="Field Name" narrative="The name of the new field." expr="&quot;Emp_Hike&quot;" />
+      <input type="text" name="Value" narrative="The value to be put in the new field." expr="0" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Appended Collection" narrative="The collection with field appended." stage="Emp_Data_1" />
+    </outputs>
+    <onsuccess>7bc018cd-9103-477c-bad5-e9543577ff87</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Field (Number)" />
+  </stage>
+  <stage stageid="ebb382fe-518b-4392-8e8a-1b3fd553fe67" name="Emp_Data" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Emp_id" type="text" description="id" />
+      <field name="emp_Name" type="text" description="name" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Emp_id" type="text" value="1" />
+        <field name="emp_Name" type="text" value="sam" />
+      </row>
+      <row>
+        <field name="Emp_id" type="text" value="2" />
+        <field name="emp_Name" type="text" value="Jack" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="ebe5e75b-1e8c-4b43-9a52-d4fdbe56f856" name="Emp_Data_1" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>60</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+</process>

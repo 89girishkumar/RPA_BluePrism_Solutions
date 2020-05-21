@@ -1,0 +1,1236 @@
+﻿<process name="P15_IBMAA_obj" version="1.0" bpversion="5.0.10.0" narrative="" type="object" runmode="Exclusive" preferredid="b7f2d63a-d993-4a0a-ab0c-f5972aa4b4ef">
+  <appdef>
+    <element name="P15_IBMAA_obj">
+      <id>2ebab967-c031-448b-b50b-0856d83ba816</id>
+      <element name="input error code">
+        <id>9560d189-1eda-4959-ae77-c68e1bf7eb2b</id>
+        <type>Edit</type>
+        <basetype>Edit</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="Edit" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="304" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="128" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="74" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="26" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal" inuse="True">
+            <ProcessValue datatype="number" value="14" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="Details IBMMAINFRAMES.com ABEND ASSIST &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="3" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:359,246,267,428" />
+          </attribute>
+          <attribute name="pWindowText">
+            <ProcessValue datatype="text" value="Details" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="Button" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="24" />
+          </attribute>
+          <attribute name="pY">
+            <ProcessValue datatype="number" value="64" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="426" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="402" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="9" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="21" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="btn_go">
+        <id>883a137e-4e10-4bc6-8cec-9dd8049ad72c</id>
+        <type>Window</type>
+        <basetype>Window</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="ThunderRT6UserControlDC" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="376" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="128" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="42" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="26" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal" inuse="True">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="Details IBMMAINFRAMES.com ABEND ASSIST &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="3" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:500,404,429,541" />
+          </attribute>
+          <attribute name="pWindowText">
+            <ProcessValue datatype="text" value="Details" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="Button" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="24" />
+          </attribute>
+          <attribute name="pY" inuse="True">
+            <ProcessValue datatype="number" value="64" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="426" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="402" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="9" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="21" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="Refresh">
+        <id>abf04486-2f15-45dc-b047-3ca0682fbf50</id>
+        <type>Window</type>
+        <basetype>Window</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="ThunderRT6UserControlDC" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="472" />
+          </attribute>
+          <attribute name="Y" inuse="True">
+            <ProcessValue datatype="number" value="112" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="50" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="58" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:631,294,351,680" />
+          </attribute>
+          <attribute name="pWindowText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="ThunderRT6FormDC" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="156" />
+          </attribute>
+          <attribute name="pY">
+            <ProcessValue datatype="number" value="156" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="536" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="530" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="9" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="dpd_GET error code">
+        <id>4e989a20-b187-48c3-8871-844a2ee0c34b</id>
+        <type>ComboBox</type>
+        <basetype>ComboBox</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText" inuse="True">
+            <ProcessValue datatype="text" value="Choose Here" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="ComboBox" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="120" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="192" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="122" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="22" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal" inuse="True">
+            <ProcessValue datatype="number" value="8" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:203,391,412,324" />
+          </attribute>
+          <attribute name="pWindowText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="ThunderRT6FormDC" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="80" />
+          </attribute>
+          <attribute name="pY">
+            <ProcessValue datatype="number" value="173" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="536" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="530" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="9" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="dpd_btn">
+        <id>14a37d1f-09ce-4bdf-b78d-e30ce5e423df</id>
+        <type>ComboBox</type>
+        <basetype>ComboBox</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText" inuse="True">
+            <ProcessValue datatype="text" value="Choose Here" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="ComboBox" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="120" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="192" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="122" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="22" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal">
+            <ProcessValue datatype="number" value="8" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:227,322,343,348" />
+          </attribute>
+          <attribute name="pWindowText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="ThunderRT6FormDC" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="104" />
+          </attribute>
+          <attribute name="pY">
+            <ProcessValue datatype="number" value="104" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="536" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="530" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="9" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="List select">
+        <id>3fb109d0-2068-4a3f-a02d-a091767bd0b2</id>
+        <type>ListBox</type>
+        <basetype>ListBox</basetype>
+        <datatype>collection</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="ListBox" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="1000" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="279" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="395" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="122" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="107" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="&lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:280,396,500,382" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <element name="Exit">
+        <id>38f4b576-e4df-4b1b-9167-9db6bd427bce</id>
+        <type>Window</type>
+        <basetype>Window</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="ThunderRT6UserControlDC" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="472" />
+          </attribute>
+          <attribute name="Y" inuse="True">
+            <ProcessValue datatype="number" value="400" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="50" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="58" />
+          </attribute>
+          <attribute name="Visible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled" inuse="True">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST &lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="2" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:546,597,654,595" />
+          </attribute>
+          <attribute name="pWindowText">
+            <ProcessValue datatype="text" value="IBMMAINFRAMES.com ABEND ASSIST" />
+          </attribute>
+          <attribute name="pClassName">
+            <ProcessValue datatype="text" value="ThunderRT6FormDC" />
+          </attribute>
+          <attribute name="pCtrlID">
+            <ProcessValue datatype="number" value="0" />
+          </attribute>
+          <attribute name="pX">
+            <ProcessValue datatype="number" value="71" />
+          </attribute>
+          <attribute name="pY">
+            <ProcessValue datatype="number" value="171" />
+          </attribute>
+          <attribute name="pWidth">
+            <ProcessValue datatype="number" value="536" />
+          </attribute>
+          <attribute name="pHeight">
+            <ProcessValue datatype="number" value="530" />
+          </attribute>
+          <attribute name="pVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pEnabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pActive">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="pOrdinal">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="pChildCount">
+            <ProcessValue datatype="number" value="9" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+    <apptypeinfo>
+      <id>Win32Launch</id>
+      <parameters>
+        <parameter>
+          <name>Path</name>
+          <value>C:\Program Files (x86)\Mainframe ABEND ASSIST\ABENDASSIST.exe</value>
+        </parameter>
+        <parameter>
+          <name>CommandLineParams</name>
+          <value>
+          </value>
+        </parameter>
+        <parameter>
+          <name>WorkingDirectory</name>
+          <value>
+          </value>
+        </parameter>
+        <parameter>
+          <name>NonInvasive</name>
+          <value>True</value>
+        </parameter>
+        <parameter>
+          <name>ProcessMode</name>
+          <value>Internal</value>
+        </parameter>
+      </parameters>
+    </apptypeinfo>
+  </appdef>
+  <view>
+    <camerax>-48</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="c7ac07de-daea-4599-b039-d491d629b1b1" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="ad140917-d959-4da5-9918-910e20a04a71" type="Normal" published="True">
+    <name>Launch</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="2a31553e-e0ca-4684-ad0f-2b32ab0852aa" type="Normal" published="True">
+    <name>Get error info</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="03518e31-3f3e-4d79-8d7e-1bb66c4614a8" type="Normal" published="True">
+    <name>Refresh</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="70fb94ba-33aa-48fb-aba1-d6dcd4d50d73" type="Normal" published="True">
+    <name>Exit</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="c0a801db-d70c-4551-bf56-b257b543067e" type="Normal" published="True">
+    <name>DPD GET error code</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="4de8492d-8622-4973-af98-e7a81895c7a6" name="Start" type="Start">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-330</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>34008d81-58ed-4a1a-91c8-97f14c3bcc73</onsuccess>
+  </stage>
+  <stage stageid="34008d81-58ed-4a1a-91c8-97f14c3bcc73" name="End" type="End">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-330</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="803cf63f-c897-459b-8744-c77ba6a1952a" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-600</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <references>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="991dac4d-5d47-400e-8020-95fff7bb29ee" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>c7ac07de-daea-4599-b039-d491d629b1b1</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="fb939029-2023-424e-8442-fcece9884fce" name="Start" type="Start">
+    <subsheetid>c7ac07de-daea-4599-b039-d491d629b1b1</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>eae79b21-4218-46fb-84de-2555de49c1c6</onsuccess>
+  </stage>
+  <stage stageid="eae79b21-4218-46fb-84de-2555de49c1c6" name="End" type="End">
+    <subsheetid>c7ac07de-daea-4599-b039-d491d629b1b1</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="68edd7dc-7476-4c0c-88dd-73e214bcda1f" name="Launch" type="SubSheetInfo">
+    <subsheetid>ad140917-d959-4da5-9918-910e20a04a71</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-630</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="b26615a5-d300-44d8-b9f9-3bec4b5070cb" name="Start" type="Start">
+    <subsheetid>ad140917-d959-4da5-9918-910e20a04a71</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-405</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>645fe01d-60e4-46c8-92fe-9e440420aadd</onsuccess>
+  </stage>
+  <stage stageid="9d9b3dec-8cee-4482-8d83-8a8802ee2670" name="End" type="End">
+    <subsheetid>ad140917-d959-4da5-9918-910e20a04a71</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-405</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="7cbbe96c-6a80-46d7-a004-20870e4e47fc" name="Note1" type="Note">
+    <subsheetid>c7ac07de-daea-4599-b039-d491d629b1b1</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="798d1cba-621f-4bdc-8a66-21ff27babba0" name="Note2" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <displayx>-600</displayx>
+    <displayy>0</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="645fe01d-60e4-46c8-92fe-9e440420aadd" name="Launch" type="Navigate">
+    <subsheetid>ad140917-d959-4da5-9918-910e20a04a71</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-405</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>9d9b3dec-8cee-4482-8d83-8a8802ee2670</onsuccess>
+    <step>
+      <element id="2ebab967-c031-448b-b50b-0856d83ba816" />
+      <action>
+        <id>Launch</id>
+        <arguments>
+          <argument>
+            <id>Path</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>CommandLineParams</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>WorkingDirectory</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>NonInvasive</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>ProcessMode</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="32bbe526-fbae-4acc-9155-c85ec03842a8" name="Get error info" type="SubSheetInfo">
+    <subsheetid>2a31553e-e0ca-4684-ad0f-2b32ab0852aa</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-615</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="e12d0d0d-9a4f-4978-9faa-66b5ffd38b4a" name="Start" type="Start">
+    <subsheetid>2a31553e-e0ca-4684-ad0f-2b32ab0852aa</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>2c0c2dab-29b2-4925-a2be-885edfd30d79</onsuccess>
+  </stage>
+  <stage stageid="247f1e1d-7223-4e48-a0fa-1f63381a2282" name="End" type="End">
+    <subsheetid>2a31553e-e0ca-4684-ad0f-2b32ab0852aa</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="2c0c2dab-29b2-4925-a2be-885edfd30d79" name="Writer1" type="Write">
+    <subsheetid>2a31553e-e0ca-4684-ad0f-2b32ab0852aa</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>1b16223b-dce4-4bf5-bf6c-3c165f60364b</onsuccess>
+    <step expr="&quot;02&quot;">
+      <element id="9560d189-1eda-4959-ae77-c68e1bf7eb2b" />
+    </step>
+  </stage>
+  <stage stageid="1b16223b-dce4-4bf5-bf6c-3c165f60364b" name="Navigate1" type="Navigate">
+    <subsheetid>2a31553e-e0ca-4684-ad0f-2b32ab0852aa</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>247f1e1d-7223-4e48-a0fa-1f63381a2282</onsuccess>
+    <step>
+      <element id="883a137e-4e10-4bc6-8cec-9dd8049ad72c" />
+      <action>
+        <id>MouseClickCentre</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="d5f4f4cb-a70b-48d8-ac99-a505440aac26" name="DPD GET error code" type="SubSheetInfo">
+    <subsheetid>c0a801db-d70c-4551-bf56-b257b543067e</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-585</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="4597035a-6a65-4a4d-9c2e-64b5587681f2" name="Start" type="Start">
+    <subsheetid>c0a801db-d70c-4551-bf56-b257b543067e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>6a8d2439-1459-47c5-9b6a-6f2a0bca9c9f</onsuccess>
+  </stage>
+  <stage stageid="6a8d2439-1459-47c5-9b6a-6f2a0bca9c9f" name="DPD" type="Navigate">
+    <subsheetid>c0a801db-d70c-4551-bf56-b257b543067e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f1c5e63f-3896-48bc-bff3-66d4cccbdf06</onsuccess>
+    <step>
+      <element id="4e989a20-b187-48c3-8871-844a2ee0c34b" />
+      <action>
+        <id>ShowDropdown</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="f1c5e63f-3896-48bc-bff3-66d4cccbdf06" name="select code" type="Navigate">
+    <subsheetid>c0a801db-d70c-4551-bf56-b257b543067e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>95d6b7c7-cf3a-40d5-98ad-c8577e801777</onsuccess>
+    <step>
+      <element id="3fb109d0-2068-4a3f-a02d-a091767bd0b2" />
+      <action>
+        <id>MouseClickCentre</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="95d6b7c7-cf3a-40d5-98ad-c8577e801777" name="End1" type="End">
+    <subsheetid>c0a801db-d70c-4551-bf56-b257b543067e</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="29e2c371-967f-4666-bda8-4e3f5e27fa31" name="Refresh" type="SubSheetInfo">
+    <subsheetid>03518e31-3f3e-4d79-8d7e-1bb66c4614a8</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-585</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="2783cdc5-3785-4ab7-89ef-5ba8bd64934a" name="Start" type="Start">
+    <subsheetid>03518e31-3f3e-4d79-8d7e-1bb66c4614a8</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>6b860743-c607-496e-b67b-56e91283f806</onsuccess>
+  </stage>
+  <stage stageid="3fc30304-0cd6-4831-ace8-63f88aa0fb29" name="End" type="End">
+    <subsheetid>03518e31-3f3e-4d79-8d7e-1bb66c4614a8</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="6b860743-c607-496e-b67b-56e91283f806" name="Navigate2" type="Navigate">
+    <subsheetid>03518e31-3f3e-4d79-8d7e-1bb66c4614a8</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>3fc30304-0cd6-4831-ace8-63f88aa0fb29</onsuccess>
+    <step>
+      <element id="abf04486-2f15-45dc-b047-3ca0682fbf50" />
+      <action>
+        <id>MouseClickCentre</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="d915223a-c325-44ab-b95a-925ad8888d6e" name="Exit" type="SubSheetInfo">
+    <subsheetid>70fb94ba-33aa-48fb-aba1-d6dcd4d50d73</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-615</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="acd6fafc-badd-4fba-a314-49b276aac292" name="Start" type="Start">
+    <subsheetid>70fb94ba-33aa-48fb-aba1-d6dcd4d50d73</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>8c7e68be-41d3-421d-a7f9-ceec6ebd07fc</onsuccess>
+  </stage>
+  <stage stageid="5ac2e93c-4d69-40a9-b4cc-aa6d621c0a8a" name="End" type="End">
+    <subsheetid>70fb94ba-33aa-48fb-aba1-d6dcd4d50d73</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="8c7e68be-41d3-421d-a7f9-ceec6ebd07fc" name="Navigate3" type="Navigate">
+    <subsheetid>70fb94ba-33aa-48fb-aba1-d6dcd4d50d73</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>5ac2e93c-4d69-40a9-b4cc-aa6d621c0a8a</onsuccess>
+    <step>
+      <element id="38f4b576-e4df-4b1b-9167-9db6bd427bce" />
+      <action>
+        <id>MouseClickCentre</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+</process>

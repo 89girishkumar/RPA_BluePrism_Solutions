@@ -1,0 +1,128 @@
+﻿<process name="P8_114" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="3a0a06d6-0c80-4ee8-9b7c-57c674cbaa7d">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="d30991fb-5a12-4352-acc5-c8ca89157525" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c5537d77-bc03-4247-a7cf-05b42906d84a</onsuccess>
+  </stage>
+  <stage stageid="e3e01493-8ecc-41af-b7d2-1ca323fe99a6" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="608c33a5-d497-496f-941c-15b906d3390f" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-255</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="67c57068-ecc9-4d12-8a73-88f668fabb81" name="Emp_Data" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-270</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Emp_Id" type="text" description="employee ID" />
+      <field name="Emp_Name" type="text" description="Employee Name" />
+      <field name="Emp_Sal" type="number" description="Employee Sal" />
+      <field name="Emp_Hike" type="number" description="Employee Hike" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Emp_Id" type="text" value="Emp_1" />
+        <field name="Emp_Name" type="text" value="Jack" />
+        <field name="Emp_Sal" type="number" value="4500" />
+        <field name="Emp_Hike" type="number" value="" />
+      </row>
+      <row>
+        <field name="Emp_Id" type="text" value="Emp_2" />
+        <field name="Emp_Name" type="text" value="will" />
+        <field name="Emp_Sal" type="number" value="3000" />
+        <field name="Emp_Hike" type="number" value="" />
+      </row>
+      <row>
+        <field name="Emp_Id" type="text" value="Emp_3" />
+        <field name="Emp_Name" type="text" value="Sam" />
+        <field name="Emp_Sal" type="number" value="5500" />
+        <field name="Emp_Hike" type="number" value="" />
+      </row>
+      <row>
+        <field name="Emp_Id" type="text" value="Emp_4" />
+        <field name="Emp_Name" type="text" value="Steve" />
+        <field name="Emp_Sal" type="number" value="8000" />
+        <field name="Emp_Hike" type="number" value="" />
+      </row>
+      <row>
+        <field name="Emp_Id" type="text" value="Emp_5" />
+        <field name="Emp_Name" type="text" value="Tim" />
+        <field name="Emp_Sal" type="number" value="7200" />
+        <field name="Emp_Hike" type="number" value="" />
+      </row>
+      <row>
+        <field name="Emp_Id" type="text" value="Emp_6" />
+        <field name="Emp_Name" type="text" value="Smith" />
+        <field name="Emp_Sal" type="number" value="4200" />
+        <field name="Emp_Hike" type="number" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="c5537d77-bc03-4247-a7cf-05b42906d84a" name="Loop Start1" type="LoopStart">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0a7a61de-7015-4f74-bfd1-394113d0c002</onsuccess>
+    <groupid>7635986c-d919-49cf-b2bf-88c79da9153b</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Emp_Data</loopdata>
+  </stage>
+  <stage stageid="6f05d753-46bf-4b8b-9208-73e6bbeceb3e" name="Loop End1" type="LoopEnd">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>e3e01493-8ecc-41af-b7d2-1ca323fe99a6</onsuccess>
+    <groupid>7635986c-d919-49cf-b2bf-88c79da9153b</groupid>
+  </stage>
+  <stage stageid="0a7a61de-7015-4f74-bfd1-394113d0c002" name="Calc1" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>6f05d753-46bf-4b8b-9208-73e6bbeceb3e</onsuccess>
+    <calculation expression="[Emp_Data.Emp_Sal]*0.1" stage="Emp_Data.Emp_Hike" />
+  </stage>
+</process>

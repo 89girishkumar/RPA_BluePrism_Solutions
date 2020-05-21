@@ -1,0 +1,255 @@
+﻿<process name="oanda" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="0199bc5e-1520-4112-8ace-14c05100d914">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="f02a5571-c8a3-444a-bbc4-1cf6e636fcc9" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>edac3a69-2a58-463a-b3a0-b55c6d20fe02</onsuccess>
+  </stage>
+  <stage stageid="dcc72de1-ea75-478d-a9d8-8073b07326a4" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>225</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="8efabb56-00a2-4c5a-b683-028fcaba5a85" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-600</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="edac3a69-2a58-463a-b3a0-b55c6d20fe02" name="create instance" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="flag" name="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>a08be138-e834-4759-a91b-d9b3308907f0</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="a08be138-e834-4759-a91b-d9b3308907f0" name="open workbook" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" narrative="The path and name of the file which should be opened." expr="&quot;F:\Software\RPA\currencyconverter.xlsx&quot;" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>aaec0119-77f2-494a-b5ee-b721c705482d</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="aaec0119-77f2-494a-b5ee-b721c705482d" name="Get worksheet as collection" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="&quot;Sheet1&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="Input_collection" />
+    </outputs>
+    <onsuccess>495429f0-5712-4af0-bcb0-90182ac0335b</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="495429f0-5712-4af0-bcb0-90182ac0335b" name="Launch" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>9c615e7e-ade4-4365-a36d-6a28f810405f</onsuccess>
+    <resource object="oanda_obj" action="Launch" />
+  </stage>
+  <stage stageid="b4b0c470-035c-4d46-b92a-f993864d7c69" name="handle" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>240</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="35024225-15f8-4612-ae74-30e9fcec3e3e" name="Workbook Name" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>360</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f5b5cc97-9c4d-409c-a81b-45a55c2a9b08" name="Input_collection" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>225</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9c615e7e-ade4-4365-a36d-6a28f810405f" name="Loop Start1" type="LoopStart">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>af6ae220-1010-4312-8775-836871062a30</onsuccess>
+    <groupid>b40092d4-1217-4863-ab36-5240684247ae</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Input_collection</loopdata>
+  </stage>
+  <stage stageid="462fcf1c-e2e3-493f-9912-e277c377d4ca" name="Loop End1" type="LoopEnd">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>225</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>dcc72de1-ea75-478d-a9d8-8073b07326a4</onsuccess>
+    <groupid>b40092d4-1217-4863-ab36-5240684247ae</groupid>
+  </stage>
+  <stage stageid="af6ae220-1010-4312-8775-836871062a30" name="Input value" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="Input value" expr="[Input_collection.Amount]" />
+    </inputs>
+    <onsuccess>d36f3538-e4b7-47c2-bce2-27d7bcee30d5</onsuccess>
+    <resource object="oanda_obj" action="Input value" />
+  </stage>
+  <stage stageid="ed261b40-96ce-492a-a67c-bf67a2df2ec4" name="From currency" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="From currency" expr="[Input_collection.Currency]" />
+    </inputs>
+    <onsuccess>066e7a29-8f9f-41b2-9c29-569c0146ac52</onsuccess>
+    <resource object="oanda_obj" action="From currency" />
+  </stage>
+  <stage stageid="11231814-c5e3-4e7a-befe-79b700c77263" name="To currency" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="To currency" expr="[To]" />
+    </inputs>
+    <onsuccess>17da939f-2793-42e0-817f-857a10ee1269</onsuccess>
+    <resource object="oanda_obj" action="To currency" />
+  </stage>
+  <stage stageid="304508de-88d1-4165-a848-44612a634cbf" name="To" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>360</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">INR</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="17da939f-2793-42e0-817f-857a10ee1269" name="Read result" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>165</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="text" name="Result" stage="Input_collection.INR" />
+    </outputs>
+    <onsuccess>462fcf1c-e2e3-493f-9912-e277c377d4ca</onsuccess>
+    <resource object="oanda_obj" action="Read result" />
+  </stage>
+  <stage stageid="d36f3538-e4b7-47c2-bce2-27d7bcee30d5" name="From click" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ed261b40-96ce-492a-a67c-bf67a2df2ec4</onsuccess>
+    <resource object="oanda_obj" action="from click" />
+  </stage>
+  <stage stageid="066e7a29-8f9f-41b2-9c29-569c0146ac52" name="To click" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>11231814-c5e3-4e7a-befe-79b700c77263</onsuccess>
+    <resource object="oanda_obj" action="To click" />
+  </stage>
+</process>

@@ -1,0 +1,117 @@
+﻿<process name="P6_circular path / virtual loop" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="5ae43cb8-ea3f-4763-8129-f792ba90d304">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="00242e9e-c975-4e7b-a29c-5b26c9315357" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f2c154b9-4f4d-4fa6-af1b-877cbd842747</onsuccess>
+  </stage>
+  <stage stageid="432fb8be-2c48-49d1-894a-1f900760dc5c" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="0fd510a4-ee3e-4b74-ba0f-4ae25f468d20" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-615</displayx>
+    <displayy>-270</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="d533a7d7-372a-4df5-8bf4-d15423b1a37e" name="Num" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-90</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>1</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2c98e82c-258d-490a-bf5f-0b60682ed4b5" name="Counter" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f2c154b9-4f4d-4fa6-af1b-877cbd842747" name="Inc_Num" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>4028348d-f935-4d41-a26b-58ccaf1812a5</onsuccess>
+    <calculation expression="[Num] + [Num]" stage="Num" />
+  </stage>
+  <stage stageid="4028348d-f935-4d41-a26b-58ccaf1812a5" name="Inc_Counter" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>833305da-9618-4811-b4fd-635230e96a4e</onsuccess>
+    <calculation expression="[Counter] + 1" stage="Counter" />
+  </stage>
+  <stage stageid="833305da-9618-4811-b4fd-635230e96a4e" name="Counter&lt;5" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>-315</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Counter] &lt; 5" />
+    <ontrue>4acafd12-ba57-4763-91c9-dc3d35c3fdd6</ontrue>
+    <onfalse>432fb8be-2c48-49d1-894a-1f900760dc5c</onfalse>
+  </stage>
+  <stage stageid="4acafd12-ba57-4763-91c9-dc3d35c3fdd6" name="Anchor1" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-420</displayx>
+    <displayy>15</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>6d82fd7f-7eb3-4bd4-a6e9-cf1e8b2e0091</onsuccess>
+  </stage>
+  <stage stageid="6d82fd7f-7eb3-4bd4-a6e9-cf1e8b2e0091" name="Anchor2" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-420</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f2c154b9-4f4d-4fa6-af1b-877cbd842747</onsuccess>
+  </stage>
+</process>

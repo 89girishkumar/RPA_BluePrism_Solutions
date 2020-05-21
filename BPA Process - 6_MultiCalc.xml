@@ -1,0 +1,109 @@
+﻿<process name="P6_114" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="fada82f1-4cc0-4653-9ed6-c2dc011fd3ab">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="6a439f46-97a5-436e-a500-01cd7dc610e2" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="2f552a94-6911-44d3-8a65-857e9931f006" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>b97f5feb-f2d6-4be7-ab56-3d901cd6356e</onsuccess>
+  </stage>
+  <stage stageid="092f510f-2f33-427c-959b-36fb85efe1df" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="4d083111-1a42-4be1-8f3e-7adb5994d7a0" name="num" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-255</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>1</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6293565e-0c5f-4928-b28d-8211d5f7ced1" name="counter" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c7af0da8-818a-440a-a557-f64efc2bf309" name="Decision1" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[counter]&lt;15" />
+    <ontrue>e77014de-018a-45ca-af53-b3c25cf054aa</ontrue>
+    <onfalse>092f510f-2f33-427c-959b-36fb85efe1df</onfalse>
+  </stage>
+  <stage stageid="e77014de-018a-45ca-af53-b3c25cf054aa" name="Anchor1" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>30</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>d624c504-6904-4a70-80e4-4595b76dbbde</onsuccess>
+  </stage>
+  <stage stageid="d624c504-6904-4a70-80e4-4595b76dbbde" name="Anchor2" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-45</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>b97f5feb-f2d6-4be7-ab56-3d901cd6356e</onsuccess>
+  </stage>
+  <stage stageid="b97f5feb-f2d6-4be7-ab56-3d901cd6356e" name="Multi1" type="MultipleCalculation">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c7af0da8-818a-440a-a557-f64efc2bf309</onsuccess>
+    <steps>
+      <calculation expression="[num]+[num]" stage="num" />
+      <calculation expression="[counter]+1" stage="counter" />
+    </steps>
+  </stage>
+</process>

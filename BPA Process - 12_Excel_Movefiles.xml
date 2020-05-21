@@ -1,0 +1,300 @@
+﻿<process name="P12_114" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="81da6add-a986-4cca-81e1-148919c4fcec">
+  <view>
+    <camerax>13.7999878</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="cfda9225-dc3a-4092-92d6-06943a735459" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>5ee067bd-9243-4f75-83bf-3efe2f2cad90</onsuccess>
+  </stage>
+  <stage stageid="5316e5dd-dd28-4364-afad-0826bc358038" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>165</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="c331f404-f6de-403e-a11e-5b81347a7cc4" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="5ee067bd-9243-4f75-83bf-3efe2f2cad90" name="Dir_Check" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Directory Name" narrative="The directory to check exists" expr="[MF]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Exists" narrative="True if the directory exists" stage="Dir_Exists" />
+    </outputs>
+    <onsuccess>68ad5ab0-d2bc-4331-be51-3073f7cb12fe</onsuccess>
+    <resource object="Utility - File Management" action="Directory Exists" />
+  </stage>
+  <stage stageid="024e4e2f-ccf0-44b8-8cc1-8c44e382b175" name="MF" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>240</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">D:\RPA\Training\Batch114\DataFolder\</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9e091c63-fbad-42e9-a84d-611f1e2cb0ad" name="Dir_Exists" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-285</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="68ad5ab0-d2bc-4331-be51-3073f7cb12fe" name="Decision1" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Dir_Exists] = True" />
+    <ontrue>1d0d890d-53fc-49e2-9adf-98a4a8f65730</ontrue>
+    <onfalse>5242043b-847f-48dd-8d93-fd8ff42f23f1</onfalse>
+  </stage>
+  <stage stageid="5242043b-847f-48dd-8d93-fd8ff42f23f1" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-90</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="1d0d890d-53fc-49e2-9adf-98a4a8f65730" name="GetFiles" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Folder" narrative="The folder in which to look for files" expr="[MF]" />
+      <input type="text" name="Patterns CSV" narrative="The comma seperated list of wildcard patterns" expr="&quot;*.*&quot;" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" narrative="True if successful" stage="S1" />
+      <output type="text" name="Message" narrative="A message if unsuccessful" stage="M1" />
+      <output type="collection" name="Files" narrative="The collection of files found" stage="Files" />
+    </outputs>
+    <onsuccess>11285d4a-3be1-4b41-adb9-5e82d74994b5</onsuccess>
+    <resource object="Utility - File Management" action="Get Files" />
+  </stage>
+  <stage stageid="6d55897d-2efb-4e63-a9ac-6beca7564dfc" name="S1" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-225</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f03ae6db-dc38-4957-bb1e-01553f8705db" name="M1" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-285</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ab0dfae9-3415-4270-92b0-74a4ce70a49d" name="Files" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-225</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="11285d4a-3be1-4b41-adb9-5e82d74994b5" name="files_count" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Collection Name" narrative="The name of the collection to act upon" expr="&quot;Files&quot;" />
+    </inputs>
+    <outputs>
+      <output type="number" name="Count" narrative="The number of rows counted in the collection" stage="Files_count" />
+    </outputs>
+    <onsuccess>a23324f3-dcc5-4a24-9e88-d6fa0d95522f</onsuccess>
+    <resource object="Blueprism.AutomateProcessCore.clsCollectionActions" action="Count Rows" />
+  </stage>
+  <stage stageid="d52c5d36-a3cb-4460-819b-2c088759baa8" name="Files_count" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a23324f3-dcc5-4a24-9e88-d6fa0d95522f" name="Decision2" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Files_count] &gt; 0" />
+    <ontrue>632d0907-80a8-4918-84ca-5fa83d1fea25</ontrue>
+    <onfalse>41265f84-46dc-4bbf-b226-b701a81d9871</onfalse>
+  </stage>
+  <stage stageid="41265f84-46dc-4bbf-b226-b701a81d9871" name="Anchor1" type="Anchor">
+    <narrative>
+    </narrative>
+    <displayx>-90</displayx>
+    <displayy>60</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>5242043b-847f-48dd-8d93-fd8ff42f23f1</onsuccess>
+  </stage>
+  <stage stageid="083384f7-bccf-4692-a6c2-093f2f3da0d5" name="New_F" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-210</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>240</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="632d0907-80a8-4918-84ca-5fa83d1fea25" name="Multi1" type="MultipleCalculation">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>66afdd0a-9d64-42d9-8548-2e958b68abcf</onsuccess>
+    <steps>
+      <calculation expression="Today()" stage="New_F" />
+      <calculation expression="[MF] &amp; [New_F]" stage="New_F" />
+    </steps>
+  </stage>
+  <stage stageid="66afdd0a-9d64-42d9-8548-2e958b68abcf" name="Create_Dir" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Directory Path" narrative="The path in which to create the directory" expr="[New_F]" />
+      <input type="flag" name="Error If Already Exists" narrative="True to generate an error if the directory already exists" expr="False" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" narrative="True if successful" stage="S1" />
+      <output type="text" name="Message" narrative="An error message if unsuccessful" stage="M1" />
+    </outputs>
+    <onsuccess>af9d723a-f90b-480c-bb62-68732117baa0</onsuccess>
+    <resource object="Utility - File Management" action="Create Directory" />
+  </stage>
+  <stage stageid="909d956d-127f-4916-8e49-61682ae57d38" name="Move_File" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="File Path" narrative="The full path to the file to be copied" expr="[Files.Path]" />
+      <input type="text" name="Destination Path" narrative="The path of the directory to copy the file to" expr="[New_F]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" narrative="True if successful" stage="S1" />
+      <output type="text" name="Message" narrative="An error message if unsuccessful" stage="M1" />
+    </outputs>
+    <onsuccess>2fbf7ce5-9233-401a-9420-c74858924105</onsuccess>
+    <resource object="Utility - File Management" action="Copy File" />
+  </stage>
+  <stage stageid="af9d723a-f90b-480c-bb62-68732117baa0" name="Loop Start1" type="LoopStart">
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>909d956d-127f-4916-8e49-61682ae57d38</onsuccess>
+    <groupid>29a581b9-4064-4545-8fa2-4c43718d9769</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Files</loopdata>
+  </stage>
+  <stage stageid="2fbf7ce5-9233-401a-9420-c74858924105" name="Loop End1" type="LoopEnd">
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>5316e5dd-dd28-4364-afad-0826bc358038</onsuccess>
+    <groupid>29a581b9-4064-4545-8fa2-4c43718d9769</groupid>
+  </stage>
+</process>

@@ -1,0 +1,241 @@
+﻿<process name="P10_modularity and opening excel" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="af599e74-49d5-4bc0-9429-f99b8665fa39">
+  <view>
+    <camerax>0</camerax>
+    <cameray>-105</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="14308714-6f7e-4f7c-bdde-3b72f5d509ef" type="Normal" published="False">
+    <name>Page 1</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="1c996fa0-f1a1-4bf7-955b-31744e8de733" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-345</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>21b4498b-b9b0-49c7-81d7-a205e1b01924</onsuccess>
+  </stage>
+  <stage stageid="bd1805f0-0705-4791-8e89-971d57a66e52" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-615</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="21b4498b-b9b0-49c7-81d7-a205e1b01924" name="Create instance" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-285</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="flag" name="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>520230bf-6331-4423-b501-7020d04bb466</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="a1fb9975-d875-442f-8690-34a69d456bea" name="handle" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>285</displayx>
+    <displayy>-255</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="520230bf-6331-4423-b501-7020d04bb466" name="open WB" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" narrative="The path and name of the file which should be opened." expr="&quot;F:\Software\RPA\Girish.xlsx&quot;" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>c2a3ad08-c94b-4f10-a0b6-ca598a62fe94</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="8c41b663-ed29-44a7-8038-2f2ef92ac0e3" name="Workbook Name" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>270</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c2a3ad08-c94b-4f10-a0b6-ca598a62fe94" name="Get data to collection" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="&quot;Sheet1&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="Data" />
+    </outputs>
+    <onsuccess>1c1ac5cb-0110-488a-ac96-fa04dea3eb9c</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="a706e114-8742-44d0-9ddf-5d049b1a0a35" name="Data" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Emp_id" type="text" description="id" />
+      <field name="Emp_Name" type="text" description="Name" />
+      <field name="Emp_Salary" type="number" description="Salary" />
+      <field name="Emp_Hike" type="number" description="Hike" />
+      <field name="Emp_TotSal" type="number" description="Total salary" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="c1906d9b-652d-4202-9e57-70aa43266cec" name="End1" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="1c1ac5cb-0110-488a-ac96-fa04dea3eb9c" name="Close instance" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[handle]" />
+      <input type="flag" name="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="" />
+    </inputs>
+    <onsuccess>639a8f6f-ba77-4490-af2e-7eef1c53a8d0</onsuccess>
+    <resource object="MS Excel VBO" action="Close Instance" />
+  </stage>
+  <stage stageid="e3113717-581b-428a-a701-410381163d44" name="Page 1" type="SubSheetInfo">
+    <subsheetid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-615</displayx>
+    <displayy>-240</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="aeb1a4ef-4ebc-46e8-b207-0f395e923639" name="Start" type="Start">
+    <subsheetid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>-255</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>bd3148c0-acd5-4e53-95d6-1d40e0ba6367</onsuccess>
+  </stage>
+  <stage stageid="dd383cbd-4518-47e1-925f-83e3a27ac959" name="End" type="End">
+    <subsheetid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="fdabf127-6c61-4a96-b850-0c803c3c703b" name="All Calculations" type="MultipleCalculation">
+    <subsheetid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f5604e29-a0d8-4ed9-ab31-c39530287bc8</onsuccess>
+    <steps>
+      <calculation expression="[Data.Emp_Salary]*0.1" stage="Data.Emp_Hike" />
+      <calculation expression="[Data.Emp_Hike]+[Data.Emp_Salary]" stage="Data.Emp_TotSal" />
+    </steps>
+  </stage>
+  <stage stageid="bd3148c0-acd5-4e53-95d6-1d40e0ba6367" name="Loop Start1" type="LoopStart">
+    <subsheetid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>fdabf127-6c61-4a96-b850-0c803c3c703b</onsuccess>
+    <groupid>b4c06979-7484-4b82-b151-839d39ae697f</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Data</loopdata>
+  </stage>
+  <stage stageid="f5604e29-a0d8-4ed9-ab31-c39530287bc8" name="Loop End1" type="LoopEnd">
+    <subsheetid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-390</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>dd383cbd-4518-47e1-925f-83e3a27ac959</onsuccess>
+    <groupid>b4c06979-7484-4b82-b151-839d39ae697f</groupid>
+  </stage>
+  <stage stageid="639a8f6f-ba77-4490-af2e-7eef1c53a8d0" name="Page 1" type="SubSheet">
+    <narrative>
+    </narrative>
+    <displayx>-345</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c1906d9b-652d-4202-9e57-70aa43266cec</onsuccess>
+    <processid>14308714-6f7e-4f7c-bdde-3b72f5d509ef</processid>
+  </stage>
+</process>

@@ -1,0 +1,145 @@
+﻿<process name="P7_114" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="b7df7f9c-97e2-4a91-9a53-715fbdc4a14b">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="afcc776f-634c-4358-b5e8-ee286582a4d4" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>7809e44c-9f3a-46f5-8512-652027101c0a</onsuccess>
+  </stage>
+  <stage stageid="fca2f713-0284-49db-80ed-fe7d0f142553" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>240</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="1ebfece1-16da-40cb-a071-ccdc777d3e08" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-225</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="7809e44c-9f3a-46f5-8512-652027101c0a" name="Choice1" type="ChoiceStart">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>d5ae4d6b-1c18-47c8-8fb6-2ff33256be0b</groupid>
+    <choices>
+      <choice expression="[Marks] &lt;= 33 AND [Marks] &gt;= 0">
+        <name>C_Failed</name>
+        <distance>60</distance>
+        <ontrue>558b8307-2559-4a5a-9313-b135c34f9a1a</ontrue>
+      </choice>
+      <choice expression="[Marks] &lt;= 66 AND [Marks] &gt;= 34">
+        <name>C_Second</name>
+        <distance>105</distance>
+        <ontrue>c189adb9-a10e-422f-81c1-b91b676b4d27</ontrue>
+      </choice>
+      <choice expression="[Marks] &lt;=100 AND [Marks] &gt;= 67">
+        <name>C_Distinction</name>
+        <distance>150</distance>
+        <ontrue>1ce73496-b09a-4cb7-b0b9-542f10320e18</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="42436b71-e0d2-48ee-89bd-97b5f2db913a" name="Otherwise1" type="ChoiceEnd">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>8c4438b6-bf76-4bac-b4ae-65cd7a10480a</onsuccess>
+    <groupid>d5ae4d6b-1c18-47c8-8fb6-2ff33256be0b</groupid>
+  </stage>
+  <stage stageid="84b6f7ae-260f-431f-ba88-28df3eabf75e" name="Marks" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-255</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>102</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="377727d9-f756-486f-a46e-1436284a2e6b" name="Grade" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="558b8307-2559-4a5a-9313-b135c34f9a1a" name="Failed" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>fca2f713-0284-49db-80ed-fe7d0f142553</onsuccess>
+    <calculation expression="&quot;Failed&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="c189adb9-a10e-422f-81c1-b91b676b4d27" name="Second" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>fca2f713-0284-49db-80ed-fe7d0f142553</onsuccess>
+    <calculation expression="&quot;Second&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="1ce73496-b09a-4cb7-b0b9-542f10320e18" name="Distinction" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>fca2f713-0284-49db-80ed-fe7d0f142553</onsuccess>
+    <calculation expression="&quot;Distinction&quot;" stage="Grade" />
+  </stage>
+  <stage stageid="8c4438b6-bf76-4bac-b4ae-65cd7a10480a" name="Invalid" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>fca2f713-0284-49db-80ed-fe7d0f142553</onsuccess>
+    <calculation expression="&quot;Invalid&quot;&#xA;" stage="Grade" />
+  </stage>
+</process>

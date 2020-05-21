@@ -1,0 +1,347 @@
+﻿<process name="SQL Connection" version="1.0" bpversion="5.0.10.0" narrative="Connecting to SQL" preferredid="9b71addb-4a52-416d-abef-bf578c7c7070">
+  <view>
+    <camerax>-56</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="345ac270-524c-4b11-88ad-02c56d19ee8b" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>367a5462-db6e-47e3-adc9-3860d658d16d</onsuccess>
+  </stage>
+  <stage stageid="bc6aabc6-7d21-4c15-8769-999861af4634" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>480</displayx>
+    <displayy>135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="8ad260cb-7104-492a-84a8-4b2c4601bb24" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="367a5462-db6e-47e3-adc9-3860d658d16d" name="Set Connection" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Server" narrative="The name of the server and, if necessary, instance name of the SQL Server instance to connect to" expr="&quot;RAMESH\SQLEXPRESS&quot;" />
+      <input type="text" name="Database" narrative="The name of the database to connect to" expr="&quot;TO&quot;" />
+      <input type="text" name="User" narrative="If appropriate, the login name to use to connect to SQL Server. If left empty, windows authentication using the current user will be used instead of SQL Server authentication" expr="" />
+      <input type="text" name="Password" narrative="If appropriate, the password to use with the above login name to access SQL Server. Unused for windows authentication" expr="" />
+    </inputs>
+    <onsuccess>2636a7e6-7168-4dc7-a6bc-a913bb9e9298</onsuccess>
+    <resource object="Data - SQL Server" action="Set Connection" />
+  </stage>
+  <stage stageid="2636a7e6-7168-4dc7-a6bc-a913bb9e9298" name="Get the data" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="SQL" narrative="The SQL query to use to perform this action" expr="&quot;select description from [dbo].[BPADBVersion]&quot;" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" narrative="Flag indicating success (True) or failure (False)" stage="" />
+      <output type="text" name="Message" narrative="Error message giving detail regarding why this action failed" stage="" />
+      <output type="collection" name="Results" narrative="The collection of results from the query" stage="Results" />
+    </outputs>
+    <onsuccess>90b77aa6-1621-4b20-a9d4-0f51f93b49e2</onsuccess>
+    <resource object="Data - SQL Server" action="Get Collection" />
+  </stage>
+  <stage stageid="11b12802-e623-4871-b790-9ec10b008a46" name="Results" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>315</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="90b77aa6-1621-4b20-a9d4-0f51f93b49e2" name="Get CSV" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="SQL" narrative="The SQL query to use to perform this action" expr="&quot;SELECT ProcessType, name, description FROM BPAProcess&quot;" />
+      <input type="text" name="File" narrative="The full path of the file to which the CSV result should be written" expr="&quot;E:/Getdataone.csv&quot;" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" narrative="Flag indicating success (True) or failure (False)" stage="Success" />
+      <output type="text" name="Message" narrative="Error message giving detail regarding why this action failed" stage="Message" />
+    </outputs>
+    <onsuccess>6366c471-acf1-4feb-b349-e16744426172</onsuccess>
+    <resource object="Data - SQL Server" action="Get CSV File" />
+  </stage>
+  <stage stageid="768cdc90-cce4-4cc2-9f1e-826e6e768e51" name="CSV" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>360</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4560fa9b-1834-40a4-b463-bed3c91df535" name="Action1" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-300</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <resource object="" action="" />
+  </stage>
+  <stage stageid="d1552581-e6f1-43b4-9343-d5508d589ab4" name="Exception1" type="Exception">
+    <narrative>
+    </narrative>
+    <displayx>-285</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="" detail="" />
+  </stage>
+  <stage stageid="3eff35da-869e-4954-97a6-80b5cc5bfed5" name="Data1" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-360</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>unknown</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6d5ef359-1e73-40b9-829f-c5d6a5abc91c" name="Write data" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the specified collection should be written. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" narrative="The name of the workbook within which the data should be written. The default empty value indicates the current workbook within the specified instance." expr="[Workbook Name1]" />
+      <input type="text" name="Worksheet Name" narrative="The name of the worksheet on which the given data should be written. The default empty value indicates the current sheet within the specified workbook." expr="" />
+      <input type="collection" name="Collection" narrative="The collection containing the data which should be written to the worksheet." expr="[Results]" />
+      <input type="text" name="Cell Reference" narrative="The reference at which the collection should be written." expr="&quot;A1&quot;" />
+      <input type="flag" name="Include Column Names" narrative="True to indicate that the column names from the collection should be written out as the first row; False to ignore the column names and just write out the data." expr="&quot;TRUE&quot;" />
+    </inputs>
+    <onsuccess>3008370b-2ec8-4019-af86-9c48da957bf3</onsuccess>
+    <resource object="MS Excel VBO" action="Write Collection" />
+  </stage>
+  <stage stageid="8c2f2aee-1f7e-4afb-bcf4-4c8535aa74bb" name="create wb" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the workbook should be created. The default of zero indicates the currently active instance." expr="[handle]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" narrative="The name of the workbook that Excel has created - this can be changed using the &quot;Save Workbook As&quot; action" stage="Workbook Name" />
+    </outputs>
+    <onsuccess>6d5ef359-1e73-40b9-829f-c5d6a5abc91c</onsuccess>
+    <resource object="MS Excel VBO" action="Create Workbook" />
+  </stage>
+  <stage stageid="fd530510-92d2-4bd0-9648-691cda646fe5" name="create inst" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>255</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="flag" name="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>38140d19-d3f8-433b-8fb2-37ce1ab73369</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="a750becc-17cd-4dc9-b573-9a57f774620f" name="handle" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-360</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2528fe46-fc21-40fc-89e0-7cabcc54a41f" name="Workbook Name" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-420</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3008370b-2ec8-4019-af86-9c48da957bf3" name="save" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>315</displayx>
+    <displayy>135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>752b0759-e9fa-46b1-aea8-dbefe83ad4d8</onsuccess>
+    <resource object="MS Excel VBO" action="Save Current Workbook" />
+  </stage>
+  <stage stageid="752b0759-e9fa-46b1-aea8-dbefe83ad4d8" name="close" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>390</displayx>
+    <displayy>135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[handle]" />
+      <input type="flag" name="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="&quot;TRUE&quot;" />
+    </inputs>
+    <onsuccess>bc6aabc6-7d21-4c15-8769-999861af4634</onsuccess>
+    <resource object="MS Excel VBO" action="Close Instance" />
+  </stage>
+  <stage stageid="38140d19-d3f8-433b-8fb2-37ce1ab73369" name="open wb" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>330</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" narrative="The path and name of the file which should be opened." expr="&quot;E:\Getdata.csv&quot;" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name1" />
+    </outputs>
+    <onsuccess>6d5ef359-1e73-40b9-829f-c5d6a5abc91c</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="a0ffde92-ddf3-4ba3-b1a0-c95c3abbfc2c" name="Workbook Name1" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>465</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6366c471-acf1-4feb-b349-e16744426172" name="End1" type="End">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="70bd7b0f-7068-4053-a3a7-61be69e0dae2" name="CSV1" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-375</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b86e08e5-da13-4f0b-9280-ab0032f727a5" name="csv2" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>330</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4eae04e6-9137-4602-a3aa-5bce588cd565" name="Message" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>330</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6e9066de-8b14-48fc-8123-66883f39cdbe" name="Success" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>405</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+</process>

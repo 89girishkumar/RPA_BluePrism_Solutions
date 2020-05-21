@@ -1,0 +1,92 @@
+﻿<process name="P15_IBMAA" version="1.0" bpversion="5.0.10.0" narrative="" preferredid="4eeba8e9-8041-443a-bad6-d43e839f551c">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="869f48e1-177f-46d4-adfc-5dfd8aa09af3" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>770fe48f-dae4-4bc3-9cf9-49290c240196</onsuccess>
+  </stage>
+  <stage stageid="c7fe106f-f98b-4e71-b04f-f28224f36f4d" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="85d65569-6531-4c25-b6c5-b6cf13051b98" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-600</displayx>
+    <displayy>-225</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="770fe48f-dae4-4bc3-9cf9-49290c240196" name="Launch" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>e34d1420-4f64-4d1c-8345-69e216637ebe</onsuccess>
+    <resource object="P15_IBMAA_obj" action="Launch" />
+  </stage>
+  <stage stageid="e34d1420-4f64-4d1c-8345-69e216637ebe" name="Get error info" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>414174be-d880-4dfd-b9ed-ad19fd16c9f1</onsuccess>
+    <resource object="P15_IBMAA_obj" action="Get error info" />
+  </stage>
+  <stage stageid="186aeab4-15e4-4181-b4c7-a02e787c26b6" name="dpd error info" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>a2930137-1433-45d7-a5f9-e333daa39bec</onsuccess>
+    <resource object="P15_IBMAA_obj" action="DPD GET error code" />
+  </stage>
+  <stage stageid="414174be-d880-4dfd-b9ed-ad19fd16c9f1" name="refresh" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>186aeab4-15e4-4181-b4c7-a02e787c26b6</onsuccess>
+    <resource object="P15_IBMAA_obj" action="Refresh" />
+  </stage>
+  <stage stageid="a2930137-1433-45d7-a5f9-e333daa39bec" name="EXIT" type="Action">
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c7fe106f-f98b-4e71-b04f-f28224f36f4d</onsuccess>
+    <resource object="P15_IBMAA_obj" action="Exit" />
+  </stage>
+</process>
